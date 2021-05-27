@@ -2,8 +2,6 @@ package com.spring.util;
 
 /**
  * 字符串处理类
- * @author cjm
- *
  */
 public class StringUtils {
 

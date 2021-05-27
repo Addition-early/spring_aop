@@ -5,8 +5,6 @@ import java.lang.reflect.Method;
 
 /**
  * 通过反射机制创建实例调用方法和设置成员变量的值
- * @author cjm
- *
  */
 public class ReflectionUtil {
 

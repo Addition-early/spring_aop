@@ -18,7 +18,6 @@ import com.spring.util.ReflectionUtil;
  * 3 根据配置的 类 和 方法 为该类生成一个代理对象
  * 4 将改代理对象放入 bean Map 中
  * 5 调用的时候 将代理对象 转换成需要的对象
- * @author cjm
  *
  */
 public class ApplicationContext {
@@ -55,9 +54,10 @@ public class ApplicationContext {
 	                        Object targetObj = ReflectionUtil.newInstance(className);
 	                        //根据切面类创建代理者
 	                        AbsMethodAdvance proxyer = (AbsMethodAdvance)ReflectionUtil.newInstance(clazz);
-	                        //设置代理的方法
+	                        //设置要代理的方法
                             proxyer.setProxyMethodName(methodName);
-                            
+
+                            // 生动动态代理对象
                             Object object = proxyer.createProxyObject(targetObj);
                             System.out.println("targetObject:"+targetObj.getClass().getSimpleName());
                             if(object!=null){

@@ -6,8 +6,6 @@ import com.spring.proxy.AbsMethodAdvance;
 
 /**
  * 定义切点和切面， 并且继承 AbsMethodAdvance 代理类
- * @author cjm
- *
  */
 @Aspect
 public class TestAspect extends AbsMethodAdvance {
@@ -28,4 +26,6 @@ public class TestAspect extends AbsMethodAdvance {
     public void doAfter() {
         System.out.println("do after");
     }
+
+
 }
